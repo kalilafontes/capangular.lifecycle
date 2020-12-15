@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lifecycle": {
+    "diretiva": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lifecycle",
+            "outputPath": "dist/diretiva",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lifecycle:build"
+            "browserTarget": "diretiva:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lifecycle:build:production"
+              "browserTarget": "diretiva:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lifecycle:build"
+            "browserTarget": "diretiva:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lifecycle:serve"
+            "devServerTarget": "diretiva:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lifecycle:serve:production"
+              "devServerTarget": "diretiva:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "lifecycle"
+  "defaultProject": "diretiva"
 }
